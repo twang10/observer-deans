@@ -173,20 +173,20 @@ a:hover {
 /*--------------------------------------------------------------------------*/
 
 #open {
-    height: 100vh;
+    height: 98vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #0ac5f4;
-    background-image: url("http://www.transparenttextures.com/patterns/fresh-snow.png");
+    background-image: url("../img/mist.jpg");
     background-attachment: fixed;
     -webkit-animation: backgroundScroll 20s linear infinite;
     animation: backgroundScroll 20s linear infinite;
 }
  
 @-webkit-keyframes backgroundScroll {
-from {background-position: 0 0;}
-to {background-position: -400px 0;}
+    from {background-position: 0 0;}
+    to {background-position: -400px 0;}
 }
  
 @keyframes backgroundScroll {
@@ -291,8 +291,33 @@ to {background-position: -400px 0;}
 }
 
 
+/* DATA */
+/*--------------------------------------------------------------------------*/
 
 
+#data .body {
+    text-align: center;
+}
+
+#data img {
+    max-width: 100%;
+    margin: 2em auto;
+}
+
+#data strong {
+    font-size: 1.2em;
+    border-bottom: 2px solid #0ac5f4;
+    text-align: center
+}
+
+#data .qa {
+    text-align: left;
+    text-indent: 0px;
+}
+
+#data li {
+    padding: .5em;
+}
 
 
 /* ARTICLE */
@@ -306,9 +331,17 @@ to {background-position: -400px 0;}
 
 
 
+ /* FLOW CHART */
+/*--------------------------------------------------------------------------*/
 
+#flow .chart {
+    width: 100%;
+}
 
-
+#flow img {
+    max-width: 80%;
+    padding: 0% 10%;
+}
 
 
 
