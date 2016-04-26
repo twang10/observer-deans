@@ -94,7 +94,79 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/*.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: white;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}*/
+#bar{
+    position:fixed;
+    background-color: #0ac5f4;
+    width:100%;
+    height:2px;
+    top: 0;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+
+}
+
+/* GLOBAL */
+/*--------------------------------------------------------------------------*/
+
+.title {
+    width: 70%;
+    margin: 4em auto;
+    text-align: center;
+}
+
+.title h1 {
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 800;
+    margin: 0;
+    font-style: italic;
+    border-top: 2px solid #0ac5f4;
+    font-size: 4em;
+    letter-spacing: .01em;
+    border-bottom: 2px solid #0ac5f4;
+}
+
+.body {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1.25em;
+    text-align: justify;
+    width: 60%;
+    margin: 0 auto;
+    text-indent: 20px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #0ac5f4;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: #0ac5f4;
+    color: white;
+}
 
 
 /* OPENER */
@@ -106,9 +178,23 @@ textarea {
     align-items: center;
     justify-content: center;
     background-color: #0ac5f4;
+    background-image: url("http://www.transparenttextures.com/patterns/fresh-snow.png");
+    background-attachment: fixed;
+    -webkit-animation: backgroundScroll 20s linear infinite;
+    animation: backgroundScroll 20s linear infinite;
+}
+ 
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -400px 0;}
+}
+ 
+@keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -400px 0;}
 }
 
-#open h1, h3 {
+#open h1, #open h3 {
     font-family: 'Open Sans', serif;
     font-weight: 800;
     margin: 0;
@@ -137,15 +223,11 @@ textarea {
 }
 
 
-#open #title {
+#open #maintitle {
     text-align: center;
 }
 
-#open .body {
-    font-family: 'Gentium Book Basic', serif;
-    font-size: 1.25em;
-    text-align: justify;
-}
+
 
 
 /* INTRO TEXT */
@@ -160,52 +242,11 @@ textarea {
 #intro img {
     width: 100%;
     margin: 5em 0em;
+    margin-bottom: 2em;
 }
 
-#intro h1, h3 {
-    font-family: 'Open Sans', serif;
-    font-weight: 800;
-    margin: 0;
-}
-
-#intro h1 > span, .g {
-    font-family: 'Gentium Book Basic', serif;
-    text-transform: lowercase;
-    font-style: italic;
-    font-weight: 400;
-}
-
-#intro h1 {
-    border-top: 2px solid #417DC1;
-    font-size: 4em;
-    letter-spacing: .01em;
-    border-bottom: 2px solid #417DC1;
-}
-
-#intro h3 {
-    font-size: 1.5em;
-    border-top: 2px solid #417DC1;
-    margin-top: 10px;
-}
-
-#intro h3 > span {
-    padding: 0 20px;
-    position: relative;
-    top: -20px;
-    background-color: white
-}
-
-
-#intro #title {
-    text-align: center;
-}
-
-#intro .body {
-    font-family: 'Gentium Book Basic', serif;
-    font-size: 1.25em;
-    text-align: justify;
-    width: 60%;
-    margin: 0 auto;
+#intro .title {
+    width: 70%;
 }
 
 
@@ -213,66 +254,54 @@ textarea {
 /* DEANS */
 /*--------------------------------------------------------------------------*/
 
-#deans {
-    padding: 50px 0px;
-    width: 100%;
-}
 
-#deans img {
-    width: 100%;
-    margin: 5em 0em;
-}
-
-#deans h1, h3 {
-    font-family: 'Open Sans', serif;
-    font-weight: 800;
-    margin: 0;
-}
-
-#deans h1 > span, .g {
-    font-family: 'Gentium Book Basic', serif;
-    text-transform: lowercase;
-    font-style: italic;
-    font-weight: 400;
-}
-
-#deans h1 {
-    border-top: 2px solid #417DC1;
-    font-size: 4em;
-    letter-spacing: .01em;
-    border-bottom: 2px solid #417DC1;
-}
-
-#deans h3 {
-    font-size: 1.5em;
-    border-top: 2px solid #417DC1;
-    margin-top: 10px;
-}
-
-#deans h3 > span {
-    padding: 0 20px;
-    position: relative;
-    top: -20px;
-    background-color: white
-}
-
-
-#deans #title {
-    text-align: center;
-}
-
-#deans .body {
-    font-family: 'Gentium Book Basic', serif;
-    font-size: 1.25em;
-    text-align: justify;
-    width: 60%;
+.dean {
+    display: block;
     margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    /*font-family: 'Gentium Book Basic';*/
+}
+
+.dean h2 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0ac5f4;
+}
+
+.dean h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    font-family: 'Gentium Book Basic';
+    font-style: italic;
+    color: gray;
+}
+
+.dean .body {
+    padding-top: 2em;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.dean hr {
+    width: 50%;
+    margin: 3em auto;
 }
 
 
 
 
 
+
+/* ARTICLE */
+/*--------------------------------------------------------------------------*/
+
+#article strong {
+    font-size: 1.3em;
+    border-bottom: 2px solid #0ac5f4;
+}
 
 
 
